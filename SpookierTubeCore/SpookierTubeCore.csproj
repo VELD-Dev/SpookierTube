@@ -1,0 +1,172 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>11</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpookierTubeLib\SpookierTubeLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\BepInEx\core\BepInEx.Preloader.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.013">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.InternalAPIEngineBridge.013.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Splines.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.Core.Runtime">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.PhotonUtility">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.PhotonUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.Recorder">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.Settings.Runtime">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.Settings.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.UI.Runtime">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.UI.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
