@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="TabsButton" src="project://database/Assets/SpookierTubeLib/UXML/Buttons/TabsButton.uxml?fileID=9197481963319205126&amp;guid=4b03794c660bf89429898e3fe5c8f307&amp;type=3#TabsButton" />
+    <ui:Template name="HomeOffline" src="project://database/Assets/SpookierTubeLib/UXML/Tabs/HomeOffline.uxml?fileID=9197481963319205126&amp;guid=4a43576a8c33b7d4c95f0f879ae8e29d&amp;type=3#HomeOffline" />
+    <Style src="project://database/Assets/SpookierTubeLib/UXML/SpookierTubeStyles.uss?fileID=7433441132597879392&amp;guid=72d585a7889f0ce4abb7d82306d4a7ff&amp;type=3#SpookierTubeStyles" />
+    <ui:VisualElement name="TopBar" class="TopBar" style="flex-grow: 1; background-color: rgb(231, 231, 231);">
+        <ui:VisualElement name="SpookierTubeContainer" class="SpookierTube" style="flex-grow: 1; margin-top: 5px; margin-right: 0; margin-bottom: 5px; margin-left: 7px;">
+            <ui:Label tabindex="-1" text="SPÖÖKIER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Spookier" style="padding-right: 0; margin-right: 2px; padding-left: 0; padding-top: 4px;" />
+            <ui:VisualElement name="TubeBox" class="TubeBox" style="flex-grow: 0; align-items: center; align-self: center; justify-content: center; width: initial; height: initial;">
+                <ui:Label tabindex="-1" text="TUBE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Tube" style="margin-left: 10px; margin-right: 10px; padding-left: 0; padding-bottom: 0; padding-top: 0; margin-top: 7px; margin-bottom: 7px; padding-right: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Body" class="Body" style="flex-grow: 1;">
+        <ui:VisualElement name="Tabs" class="TabsContainer" style="flex-grow: 1;">
+            <ui:Instance template="TabsButton" name="TabsButton" focusable="true" class="TabButton">
+                <AttributeOverrides element-name="TabName" text="Home" />
+            </ui:Instance>
+            <ui:Instance template="TabsButton" name="TabsButton" focusable="true" tabindex="1">
+                <AttributeOverrides element-name="TabName" text="My Videos" />
+            </ui:Instance>
+            <ui:Instance template="TabsButton" name="TabsButton" focusable="true" tabindex="3">
+                <AttributeOverrides element-name="TabName" text="Stats" />
+            </ui:Instance>
+            <ui:Instance template="TabsButton" name="TabsButton" focusable="true" tabindex="2">
+                <AttributeOverrides element-name="TabName" text="Discover" />
+            </ui:Instance>
+        </ui:VisualElement>
+        <ui:VisualElement name="Main" class="MainMenuContainer" style="flex-grow: 1;">
+            <ui:Instance template="HomeOffline" name="HomeOffline" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

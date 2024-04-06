@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/SpookierTubeLib/UXML/SpookierTubeStyles.uss?fileID=7433441132597879392&amp;guid=72d585a7889f0ce4abb7d82306d4a7ff&amp;type=3#SpookierTubeStyles" />
+    <ui:VisualElement name="Body" style="flex-grow: 1; align-items: center; justify-content: center; align-self: center;">
+        <ui:VisualElement name="OfflineTextContainer" class="OfflineContainer">
+            <ui:Label tabindex="-1" text="OFFLINE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OfflineText" style="margin-bottom: 4px; margin-left: 4px; padding-right: 4px; padding-left: 4px; -unity-font-style: bold;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

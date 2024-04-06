@@ -1,0 +1,78 @@
+VisualElement.TopBar {
+    background-color: rgb(209, 209, 209);
+    max-height: 7.5%;
+}
+
+VisualElement.Body {
+    background-color: rgb(207, 207, 207);
+    flex-direction: row;
+}
+
+VisualElement.SpookierTube {
+    -unity-font-style: bold;
+    flex-direction: row;
+    -unity-text-align: middle-left;
+}
+
+VisualElement.TubeBox {
+    -unity-text-align: middle-center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    color: rgb(217, 217, 217);
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+VisualElement.TabsContainer {
+    max-width: 15%;
+    background-color: rgb(236, 236, 236);
+}
+
+VisualElement.TabButton {
+    justify-content: center;
+    align-self: stretch;
+    padding-left: 5px;
+}
+
+VisualElement.TabButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+VisualElement.TabButton:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+VisualElement.MainMenuContainer {
+    justify-content: space-around;
+    align-self: stretch;
+}
+
+Label.TabText {
+    -unity-font-style: bold;
+    font-size: 11px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-right: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+VisualElement.OfflineContainer {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: rgb(231, 231, 231);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
