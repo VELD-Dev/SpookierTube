@@ -28,13 +28,16 @@ internal class UploadVideoStation_Patches
             UnityEngine.Object.Destroy(child);
         }
 
-        if(!SpooktubeResources.TryGetAsset<GameObject>("SpookierTubeUI", out var go))
+        if(!SpooktubeResources.TryGetAsset<GameObject>("SpookierTubeUI", out var spooktubePrefab))
         {
             Main.Logger.LogError("Unable to find the SpookierTubeUI prefab. Aborting.");
             return;
         }
-        go.AddComponent<SpookierTubeManager>();
-        go.transform.parent = McScreen.transform;
-        go.transform.SetSiblingIndex(go.transform.GetSiblingIndex() - 1);
+
+        var stm = spooktubePrefab.AddComponent<SpookierTubeManager>();
+        stm.FrontFilter = McScreen.transform.Find("Front").gameObject;
+        McScreen.gameObject.SetActive(false);
+        spooktubePrefab.transform.parent = __instance.transform;
+        spooktubePrefab.transform.SetSiblingIndex(spooktubePrefab.transform.GetSiblingIndex() - 1);
     }
 }

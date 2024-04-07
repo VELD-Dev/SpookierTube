@@ -5,6 +5,7 @@ public class SpookierTubeManager : MonoBehaviour
     public static VisualTreeAsset MainMenu;
     public static Dictionary<string, CategoryMenu> Tabs = new();
     public UIDocument UiDoc;
+    public GameObject FrontFilter { get; internal set; }
 
     private void Awake()
     {
@@ -22,10 +23,11 @@ public class SpookierTubeManager : MonoBehaviour
 
     private void Start()
     {
-        UiDoc = gameObject.AddComponent<UIDocument>();
+        UiDoc = gameObject.transform.Find("Panel").gameObject.AddComponent<UIDocument>();
         UiDoc.enabled = true;
         UiDoc.visualTreeAsset = MainMenu;
 
         Main.Logger.LogDebug("UIDocument set up.");
+        
     }
 }
