@@ -34,10 +34,14 @@ internal class UploadVideoStation_Patches
             return;
         }
 
-        var stm = spooktubePrefab.AddComponent<SpookierTubeManager>();
+        var spooktubeGo = UnityEngine.Object.Instantiate(spooktubePrefab);
+
+        var stm = spooktubeGo.AddComponent<SpookierTubeManager>();
         stm.FrontFilter = McScreen.transform.Find("Front").gameObject;
         McScreen.gameObject.SetActive(false);
-        spooktubePrefab.transform.parent = __instance.transform;
-        spooktubePrefab.transform.SetSiblingIndex(spooktubePrefab.transform.GetSiblingIndex() - 1);
+        spooktubeGo.transform.parent = __instance.transform;
+        spooktubeGo.transform.SetSiblingIndex(spooktubeGo.transform.GetSiblingIndex() - 1);
+        spooktubeGo.transform.SetLocalPositionAndRotation(new(0, -0.1f, -0.06f), new(0, 0, 0, 0));
+        spooktubeGo.transform.localScale = new(0.12f, 0.125f, 0.1f);
     }
 }

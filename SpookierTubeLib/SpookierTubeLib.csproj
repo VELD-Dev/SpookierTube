@@ -79,6 +79,9 @@
     <Reference Include="UnityEngine.LocalizationModule">
       <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.PropertiesModule">
       <HintPath>..\..\..\..\..\..\Mounted\SSD 2\soft\Steam\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.PropertiesModule.dll</HintPath>
     </Reference>
