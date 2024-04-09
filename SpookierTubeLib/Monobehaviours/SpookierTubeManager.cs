@@ -49,6 +49,7 @@ public class SpookierTubeManager : MonoBehaviour
             pixUv.x *= UiDoc.panelSettings.targetTexture.width;
             pixUv.y *= UiDoc.panelSettings.targetTexture.height;
 
+            Main.Logger.LogDebug($"Pos on screen: {pixUv.x}x{pixUv.y}");
             return pixUv;
         });
 
