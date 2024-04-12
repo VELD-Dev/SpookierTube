@@ -3,6 +3,7 @@
 public class SpookierTubeManager : MonoBehaviour
 {
     public static VisualTreeAsset MainMenu;
+    public static VisualTreeAsset TabTemplate;
     public static Dictionary<string, CategoryMenu> Tabs = new();
     public UIDocument UiDoc;
     public GameObject FrontFilter { get; internal set; }
@@ -12,14 +13,24 @@ public class SpookierTubeManager : MonoBehaviour
     {
         if(MainMenu is null)
         {
-            Main.Logger.LogDebug("HomeMenu was null.");
+            Main.Logger.LogDebug("Loading HomeMenu.");
             if (!SpooktubeResources.TryGetAsset<VisualTreeAsset>("HomeMenu", out MainMenu))
             {
                 Main.Logger.LogError("Couldn't load HomeMenu UI Document.");
                 return;
             }
         }
-        Main.Logger.LogDebug("HomeMenu have been defiend.");
+
+        if(TabTemplate is null)
+        {
+            Main.Logger.LogDebug("Loading TabTemplate...");
+            if(!SpooktubeResources.TryGetAsset<VisualTreeAsset>("TabButton", out TabTemplate))
+            {
+                Main.Logger.LogError("Couldn't load TabButton UI Document Template.");
+                return;
+            }
+        }
+        Main.Logger.LogDebug("HomeMenu have been defined.");
     }
 
     private void Start()
@@ -57,6 +68,35 @@ public class SpookierTubeManager : MonoBehaviour
         FrontFilter.transform.SetLocalPositionAndRotation(new(0, 0, 0), Quaternion.Euler(new(0, 0, 270)));
         gameObject.transform.Find("McScreen").Find("Panel").localScale = new(1.0125f, 1.028f, 1f);
 
+        foreach(var tabkvp in Tabs)
+        {
+            string tabname = tabkvp.Key;
+            CategoryMenu tab = tabkvp.Value;
+            TemplateContainer tabObject = TabTemplate.CloneTree();
+            var tabPressCallback = new EventCallback<ClickEvent>(
+                (clickEvent) =>
+                {
+                    if (clickEvent.button != 0)
+                        return;
+
+                    onTabSelected((uint)Tabs.ToList().IndexOf(tabkvp));
+                }
+            );
+
+            tabObject.GetChild<VisualElement>("Button").GetChild<Label>("TabName").text = tabname;
+            tabObject.RegisterCallback(tabPressCallback, TrickleDown.TrickleDown);
+
+            UiDoc.rootVisualElement.GetChild<VisualElement>("Body").GetChild<VisualElement>("Tabs").Add(tabObject);
+        }
+
         Main.Logger.LogDebug("UIDocument set up.");
+    }
+
+    private void onTabSelected(uint tabIndex)
+    {
+        var tabkvp = Tabs.ElementAt((int)tabIndex);
+        var tabContent = tabkvp.Value.menuRootAsset.CloneTree();
+        UiDoc.rootVisualElement.GetChild<VisualElement>("Body").GetChild<VisualElement>("Main").Add(tabContent);
+        tabkvp.Value.OnMenuOpen();
     }
 }

@@ -2,7 +2,7 @@
 
 public abstract class CategoryMenu : MonoBehaviour
 {
-    public static VisualTreeAsset menuRootAsset;
-    public event Action<ClickEvent> OnMenuOpen;
+    public abstract VisualTreeAsset menuRootAsset { get; protected set; }
     public abstract string menuName { get; protected set; }
+    public virtual void OnMenuOpen() { }
 }
